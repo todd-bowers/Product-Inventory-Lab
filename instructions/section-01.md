@@ -130,7 +130,7 @@ git push  // push changes to github
 
 Now it's time to thing about the Objects that will be apart of our inventory application. We will definately need a product to inventory. Come up with 2 products for your store, and thing about how you would represent them as Java objects.
 
-As an example I will be using a store that sells Sneakers and Whiskey. So, I know I will definately have a Sneaker class and a Whiskey class. We will see later on that we will create a few more classes to help manage our inventory.
+As an example I will be using a store that sells models.Sneakers and Whiskey. So, I know I will definately have a Sneaker class and a Whiskey class. We will see later on that we will create a few more classes to help manage our inventory.
 
 1. Create feature branch
 2. Create packages for models, services and test 
