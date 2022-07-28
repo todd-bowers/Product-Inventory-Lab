@@ -21,6 +21,11 @@ public class Sneaker {
         this.qty = qty;
         this.price = price;
     }
+    public String toString() {
+        String sneakerDetails = "Brand: " + this.getBrand() + "\n" + "Model: " + this.getModel() + "\n" + "Sport: " + this.getSport() + "\n" +
+                "Size: " + this.getSize() + "\n" + "Qty: " + this.getQty() + "\n" + "Price: " + this.getPrice();
+        return sneakerDetails;
+    }
     public String getBrand() {
         return brand;
     }

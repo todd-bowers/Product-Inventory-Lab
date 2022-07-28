@@ -18,6 +18,11 @@ public class Wine {
         this.qty = qty;
         this.price = price;
     }
+    public String toString() {
+        String wineDetails = "Name: " + this.getName() + "\n" + "Type: " + this.getType() + "\n" + "Year: " + this.getYear() + "\n" +
+                "Qty: " + this.getQty() + "\n" + "Price: " + this.getPrice();
+        return wineDetails;
+    }
     public int getId() {
         return id;
     }

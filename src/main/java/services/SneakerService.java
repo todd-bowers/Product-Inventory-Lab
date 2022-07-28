@@ -21,6 +21,12 @@ public class SneakerService {
         }
         return null;
     }
+    public Sneaker findSneaker(String model) {
+        for (Sneaker sneaker : inventory) {
+            if (sneaker.getModel() == model) return sneaker;
+        }
+        return null;
+    }
 
     //should return a basic array copy of the ArrayList
     public Sneaker[] findAll() {

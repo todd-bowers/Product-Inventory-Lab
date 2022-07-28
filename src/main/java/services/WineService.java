@@ -22,6 +22,12 @@ public class WineService {
         }
         return null;
     }
+    public Wine findWine(String name) {
+        for (Wine bottle : inventory) {
+            if (bottle.getName() == name) return bottle;
+        }
+        return null;
+    }
 
     public Wine[] findAll() {
         Wine[] result = new Wine[inventory.size()];
