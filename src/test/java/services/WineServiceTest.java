@@ -60,6 +60,7 @@ public class WineServiceTest {
         //Then
         Assertions.assertEquals(testWine1, actualWine1);
         Assertions.assertEquals(testWine2, actualWine2);
+        System.out.println(actualWine1.toString());
     }
     @Test
     public void findAllTest() {
@@ -82,6 +83,7 @@ public class WineServiceTest {
         Wine[] actual = wineService.findAll();
         //Then
         Assertions.assertArrayEquals(expected, actual);
+        System.out.println(wineService.formattedString(actual));
     }
     @Test
     public void deleteTest() {

@@ -1,6 +1,7 @@
 package services;
 
 import models.Sneaker;
+import models.Wine;
 
 import java.util.ArrayList;
 
@@ -27,7 +28,13 @@ public class SneakerService {
         }
         return null;
     }
-
+    public String formattedString(Sneaker[] all) {
+        StringBuilder formatted = new StringBuilder();
+        for (Sneaker sneaker : all) {
+            formatted.append(sneaker.toString() + "\n");
+        }
+        return String.valueOf(formatted);
+    }
     //should return a basic array copy of the ArrayList
     public Sneaker[] findAll() {
         Sneaker[] result = new Sneaker[inventory.size()];

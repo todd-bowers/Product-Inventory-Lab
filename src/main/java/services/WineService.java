@@ -16,6 +16,25 @@ public class WineService {
         return createdWine;
     }
 
+    public void updateQty(String name, int qty) {
+        Wine wine = findWine(name);
+        for (int i = 0; i < inventory.size(); i++) {
+            if (inventory.get(i).equals(wine)) {
+                Wine updated = new Wine(inventory.get(i).getId(), inventory.get(i).getName(), inventory.get(i).getType(), inventory.get(i).getYear(), qty, inventory.get(i).getPrice());
+                inventory.set(i, updated);
+            }
+        }
+    }
+    public void updatePrice(String name, int price) {
+        Wine wine = findWine(name);
+        for (int i = 0; i < inventory.size(); i++) {
+            if (inventory.get(i).equals(wine)) {
+                Wine updated = new Wine(inventory.get(i).getId(), inventory.get(i).getName(), inventory.get(i).getType(), inventory.get(i).getYear(), inventory.get(i).getQty(), price);
+                inventory.set(i, updated);
+            }
+        }
+    }
+
     public Wine findWine(int id) {
         for (Wine bottle : inventory) {
             if (bottle.getId() == id) return bottle;
@@ -27,6 +46,14 @@ public class WineService {
             if (bottle.getName() == name) return bottle;
         }
         return null;
+    }
+
+    public String formattedString(Wine[] all) {
+        StringBuilder formatted = new StringBuilder();
+        for (Wine bottle : all) {
+            formatted.append(bottle.toString() + " \n");
+        }
+        return String.valueOf(formatted);
     }
 
     public Wine[] findAll() {

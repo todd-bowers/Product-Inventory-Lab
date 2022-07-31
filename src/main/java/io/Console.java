@@ -14,6 +14,14 @@ public class Console {
                 "***        ZipCo Inventory Manager      ***\n" +
                 "*******************************************");
     }
+    public static void printEnd() {
+        System.out.println("" +
+                "*******************************************\n" +
+                "***            Thank you                ***\n" +
+                "***            for using                ***\n" +
+                "***        ZipCo Inventory Manager      ***\n" +
+                "*******************************************");
+    }
     public static void print(String output, Object... args) {System.out.printf(output, args);}
     public static void println(String output, Object... args) {print(output + "\n", args);}
     public static String getStringInput(String prompt) {
@@ -27,7 +35,7 @@ public class Console {
         String userString = Console.getStringInput(prompt);
         Integer result = 0;
         try {
-            result = Integer.parseInt(userString);
+            result = Integer.parseInt(userString.toLowerCase());
         } catch (NumberFormatException numberFormatException) {
             System.out.println("Invalid input!");
             return 0;
